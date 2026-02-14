@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Pavankumar Prabhu</title>
+  <meta name="description" content="Resume of Pavankumar Prabhu - Technical Architect, Airline Operations Technology">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">pavan<span>.dev</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="projects.html">Projects</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <span id="theme-icon">&#9790;</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="hero" style="padding-bottom:16px">
+      <h1 class="hero-name" style="font-size:2.2rem">Resume</h1>
+      <p class="hero-title">Switch between views</p>
+    </section>
+
+    <!-- TAB SWITCHER -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('short', event)">Short Profile</button>
+      <button class="tab-btn" onclick="switchTab('interview', event)">Interview</button>
+      <button class="tab-btn tab-locked" onclick="requestDetailedAccess()" id="btn-detailed">
+        &#128274; Detailed
+      </button>
+    </div>
+
+    <!-- ACCESS MODAL -->
+    <div id="access-modal" class="modal-overlay" style="display:none">
+      <div class="modal">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div style="text-align:center;margin-bottom:16px">
+          <span style="font-size:2rem">&#128274;</span>
+        </div>
+        <h3 style="text-align:center;margin-bottom:8px">Access Required</h3>
+        <p style="text-align:center;color:var(--text-secondary);font-size:0.9rem;margin-bottom:20px">
+          The detailed project view is available by request.<br>
+          Enter the access code or request access below.
+        </p>
+        <form onsubmit="return verifyAccess(event)">
+          <div class="form-group">
+            <label for="access-code">Access Code</label>
+            <input type="password" id="access-code" placeholder="Enter access code" autocomplete="off">
+          </div>
+          <div id="access-error" class="form-status" style="color:#e74c3c"></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:12px">Unlock</button>
+        </form>
+        <div style="text-align:center">
+          <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:8px">Don't have a code?</p>
+          <a href="index.html#contact" class="btn btn-outline" style="font-size:0.85rem">Request Access</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SHORT PROFILE ==================== -->
+    <div id="tab-short" class="tab-content active">
+
+      <section class="section" style="padding-top:16px">
+        <h2 class="section-title">Profile Summary</h2>
+        <p style="font-size:1rem;line-height:1.7;color:var(--text-secondary)">
+          Technical Architect with 16+ years of experience in the Airline domain,
+          specializing in Mainframe zTPF systems and Cloud modernization. Brings extensive
+          expertise across Crews, Departure Control Systems, Reservations, and Ticketing for
+          multiple major North American airlines. Proven track record in leading teams,
+          designing solutions, and delivering mission-critical airline operations technology
+          bridging Mainframe FOS and modern cloud-based data services.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Competencies</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-category">Airline Domain: Crews, DCS, RES, TKT</div>
+            <div class="skill-items" style="color:var(--accent);font-weight:600">Expert</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-category">TPF/zTPF (Assembler, Sabretalk, TPFC)</div>
+            <div class="skill-items" style="color:var(--accent);font-weight:600">Expert</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-category">AWS Cloud Services</div>
+            <div class="skill-items" style="color:var(--accent);font-weight:600">Proficient</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-category">Java (Spring Boot) / Python / PySpark</div>
+            <div class="skill-items" style="color:var(--accent);font-weight:600">Proficient</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Experience Snapshot</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Technical Architect</span>
+              <span class="timeline-date">2024 &ndash; Present</span>
+            </div>
+            <div class="timeline-company">Tata Consultancy Services</div>
+            <p style="color:var(--text-secondary);font-size:0.9rem">Architecting core data services between Mainframe FOS and cloud-based OpsHub.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Delivery Project Lead</span>
+              <span class="timeline-date">2013 &ndash; 2024</span>
+            </div>
+            <div class="timeline-company">Mphasis Corporation (DXC/HPE)</div>
+            <p style="color:var(--text-secondary);font-size:0.9rem">Led AWS cloud modernization, Airline Data Platform, and major airline merger projects.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Sr. Software Engineer</span>
+              <span class="timeline-date">2009 &ndash; 2013</span>
+            </div>
+            <div class="timeline-company">Hexaware Technologies</div>
+            <p style="color:var(--text-secondary);font-size:0.9rem">PSS development for Air Canada &ndash; DCS, Reservations, and EDIFACT messaging.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== INTERVIEW VIEW ==================== -->
+    <div id="tab-interview" class="tab-content">
+
+      <section class="section" style="padding-top:16px">
+        <h2 class="section-title">Professional Summary</h2>
+        <p style="font-size:1rem;line-height:1.7;color:var(--text-secondary)">
+          Technical Architect with 16+ years of experience in the Airline domain,
+          specializing in Mainframe zTPF systems and Cloud modernization. Brings extensive
+          expertise across Crews, Departure Control Systems, Reservations, and Ticketing for
+          multiple major North American airlines. Proven track record in leading teams,
+          designing solutions, and delivering mission-critical airline operations technology
+          bridging Mainframe FOS and modern cloud-based data services.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-category">Core / Legacy</div>
+            <div class="skill-items">TPF Assembler, SPM, Sabretalk, TPFC, TPFDF, z/TPF Commands, Imperative Language</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-category">Cloud & APIs</div>
+            <div class="skill-items">AWS (Lambda, API Gateway, S3, EMR, Athena, CodePipeline), Azure (Eventhubs, App Services), REST APIs</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-category">Big Data</div>
+            <div class="skill-items">Apache Spark (PySpark), AWS Glue, Kinesis, Snowflake, Apache Hudi, Quicksight</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-category">Languages</div>
+            <div class="skill-items">Assembler, Sabretalk, Java (Spring Boot), Python, PySpark, SQL, XML, YAML, JSON</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-category">DevOps & Monitoring</div>
+            <div class="skill-items">GitHub Actions, CI/CD, Dynatrace, CloudWatch, Sumologic, PagerDuty, Postman</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-category">Airline Domain</div>
+            <div class="skill-items">Crews, DCS, Reservations, Ticketing, Flight Ops, Crew Scheduling, EDIFACT, APIS</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Technical Architect</span>
+              <span class="timeline-date">Jul 2024 &ndash; Present</span>
+            </div>
+            <div class="timeline-company">Tata Consultancy Services &bull; Dallas-Fort Worth, TX</div>
+            <ul class="timeline-bullets">
+              <li>Architect core data services between Mainframe FOS and cloud-based Operations Hub using Sabretalk, Assembler, Java Spring Boot, and Azure services.</li>
+              <li>Lead requirements gathering and TPF solutioning for Crews, Pairing, Flight, and Maintenance events.</li>
+              <li>Develop data schemas for TPF-to-midrange consumption via IBM MQ for on-prem and cloud environments.</li>
+              <li>Provide 24/7 on-call production support; monitor and troubleshoot across TPF, on-prem, and cloud.</li>
+              <li>Maintain and enhance Legacy Connector Adapter REST API services and XML Message Utility platform.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Delivery Project Lead</span>
+              <span class="timeline-date">May 2013 &ndash; Jul 2024</span>
+            </div>
+            <div class="timeline-company">Mphasis Corporation (DXC/HPE) &bull; Atlanta, GA</div>
+            <ul class="timeline-bullets">
+              <li>Led ZULU Modernization at Delta Air Lines &ndash; migrated on-prem SOA to AWS cloud REST APIs for Core Ticketing Financial Document Management using Lambda, API Gateway, and CodePipeline CI/CD.</li>
+              <li>Delivered Continuous Qualification Training for American Airlines &ndash; million-dollar cost savings program transforming pilot recurrent training from 9/18-month to annual cycles.</li>
+              <li>Built Airline Data Platform using PySpark, AWS Glue/EMR, Kinesis, S3, and Athena &ndash; delivered analytics for PNR, Ticketing, Passenger, and Check-in data.</li>
+              <li>Executed Single FOS Partition merger &ndash; unified two major airlines&rsquo; Flight Operating Systems for Pilots and Flight Attendants.</li>
+              <li>Developed 737 MAX MCAS Special Training, COVID-19 Vaccine compliance, and Pilot Division Qualifications Redesign.</li>
+              <li>Maintained mission-critical Document Retrieve, Financial Travel Documents, and ToolsV2 APIs with P1 on-call support.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Sr. Software Engineer</span>
+              <span class="timeline-date">Sep 2009 &ndash; Apr 2013</span>
+            </div>
+            <div class="timeline-company">Hexaware Technologies &bull; Mumbai, India</div>
+            <ul class="timeline-bullets">
+              <li>Developed and maintained DCS for Air Canada &ndash; Airport Check-in, Baggage, Boarding, APIS, Seating, and EDIFACT messaging.</li>
+              <li>Built Secure Flights system for US DHS/TSA compliance &ndash; KTN/RED edits, AQQ messaging, and SFPD transmission.</li>
+              <li>Implemented STAR Alliance Auto Doc Check &ndash; automated travel document verification.</li>
+              <li>Developed Seat Platform Re-accommodation for United Airlines Schedule Change.</li>
+              <li>Provided requirements analysis, sizing estimates, and project estimates to IBM Canada.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Software Tester</span>
+              <span class="timeline-date">Jan 2009 &ndash; Sep 2009</span>
+            </div>
+            <div class="timeline-company">Specula Enterprise (Testingology) &bull; Mumbai, India</div>
+            <ul class="timeline-bullets">
+              <li>Led testing for gaming and E-learning applications for DHL, Kaplan, Pearson, and ICICI Prudential.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-item">
+          <div class="edu-degree">B.E. Electronics</div>
+          <div class="edu-school">University of Mumbai, India &bull; 2004&ndash;2008 &bull; Distinction</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Awards</h2>
+        <div class="award-item">
+          <div class="award-title">Ace Award &ndash; Legacy Modernization F2B Execution</div>
+          <div class="award-desc">American Airlines, Sep 2022</div>
+        </div>
+        <div class="award-item">
+          <div class="award-title">Ace Award &ndash; Best Use of Emerging Tech in Airline Data Platform</div>
+          <div class="award-desc">Mphasis, Dec 2021</div>
+        </div>
+        <div class="award-item">
+          <div class="award-title">Summit Award &ndash; Successful Project Execution</div>
+          <div class="award-desc">Mphasis</div>
+        </div>
+        <div class="award-item">
+          <div class="award-title">Apex Award &ndash; Successful Airline Merger</div>
+          <div class="award-desc">Mphasis, Team Award</div>
+        </div>
+        <div class="award-item">
+          <div class="award-title">Ace Award &ndash; Successful Project Execution</div>
+          <div class="award-desc">Hexaware Technologies</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== DETAILED VIEW ==================== -->
+    <div id="tab-detailed" class="tab-content">
+
+      <section class="section" style="padding-top:16px">
+        <h2 class="section-title">Tata Consultancy Services (Jul 2024 &ndash; Present)</h2>
+
+        <div class="project-card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <span class="project-name">01 &bull; Operations Hub &ndash; Airline Operations Technology</span>
+            <span class="timeline-date">Jul 2024 &ndash; Present</span>
+          </div>
+          <div style="font-size:0.85rem;color:var(--accent);margin-bottom:8px"><strong>Client:</strong> American Airlines (via Sabre/TCS)</div>
+          <p class="project-desc">Development, Maintenance of Core Data Services from Mainframe based Flight Operating System to On-prem and Cloud data services.</p>
+          <div class="project-tags">
+            <span class="tag">Sabretalk</span><span class="tag">Assembler</span><span class="tag">Java Spring Boot</span>
+            <span class="tag">Azure</span><span class="tag">IBM MQ</span><span class="tag">z/TPF</span>
+            <span class="tag">Oracle SQL</span><span class="tag">MongoDB</span><span class="tag">GitHub Actions</span>
+          </div>
+          <div style="font-weight:600;font-size:0.85rem;margin-bottom:6px">Responsibilities:</div>
+          <ul class="timeline-bullets">
+            <li>Requirements gathering from consumer and TPF solutioning for Crews, Pairing, Flight, Maintenance events.</li>
+            <li>Analyze reported Test and Production data issues.</li>
+            <li>Development of schema to consume data from TPF system to mid-range applications via IBM MQ.</li>
+            <li>Provide Test, Deployment to Test and Production support.</li>
+            <li>Provide scheduled on-call support for Production environment.</li>
+            <li>Monitor dumps and errors across TPF, On-prem, and cloud environments.</li>
+            <li>Maintenance and Enhancement of XML Message Utility website.</li>
+            <li>Support Legacy Connector Adapter REST API services.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Mphasis Corporation / DXC / HPE (May 2013 &ndash; Jul 2024)</h2>
+
+        <div class="project-card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <span class="project-name">02 &bull; Core Ticketing Modernization (ZULU)</span>
+            <span class="timeline-date">Aug 2022 &ndash; Jul 2024</span>
+          </div>
+          <div style="font-size:0.85rem;color:var(--accent);margin-bottom:8px"><strong>Client:</strong> Delta Air Lines, USA</div>
+          <p class="project-desc">ZULU Modernization of on-prem SOA to REST APIs in AWS Cloud and z/TPF Modernization to ingest REST APIs for Core Ticketing Financial Document Management.</p>
+          <div class="project-tags">
+            <span class="tag">TPFC</span><span class="tag">DFDL</span><span class="tag">AWS Lambda</span>
+            <span class="tag">API Gateway</span><span class="tag">CodePipeline</span><span class="tag">Quarkus Java</span>
+            <span class="tag">Sumologic</span><span class="tag">PagerDuty</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Provide Development, Enhancement, Implementation Support to AWS cloud-based REST APIs via IBM Datapower.</li>
+            <li>Develop Dashboard in Sumologic to monitor TPF transactions.</li>
+            <li>Work with Datapower and Consumer Applications for performance and SRE testing.</li>
+            <li>On-call for P1 System incidents and monitoring support.</li>
+            <li>Maintain mission-critical Document Retrieve, Financial Travel Documents, and ToolsV2 APIs.</li>
+          </ul>
+        </div>
+
+        <div class="project-card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <span class="project-name">03 &bull; Continuous Qualification Training</span>
+            <span class="timeline-date">Jul 2020 &ndash; Aug 2022</span>
+          </div>
+          <div style="font-size:0.85rem;color:var(--accent);margin-bottom:8px"><strong>Client:</strong> DXC Technology (American Airlines)</div>
+          <p class="project-desc">Million-dollar cost savings program transforming pilot recurrent training from 9/18-month to annual cycles. Executed 3 phases across Crew Qualifications and Training.</p>
+          <div class="project-tags"><span class="tag">z/TPF</span><span class="tag">Sabretalk</span><span class="tag">Assembler</span></div>
+          <ul class="timeline-bullets">
+            <li>Analyze Business Requirements and perform system analysis.</li>
+            <li>Design solution, coding and unit testing of Sabretalk and Assembler code.</li>
+            <li>Support system issues and implementation across 3 project phases.</li>
+          </ul>
+        </div>
+
+        <div class="project-card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <span class="project-name">04 &bull; COVID-19 Vaccine Requirements</span>
+            <span class="timeline-date">Mar 2020 &ndash; Nov 2021</span>
+          </div>
+          <div style="font-size:0.85rem;color:var(--accent);margin-bottom:8px"><strong>Client:</strong> DXC Technology (American Airlines)</div>
+          <p class="project-desc">Enhancement to issue alerts to Pilots for COVID-19 Vaccine compliance affecting all Crew Scheduling applications.</p>
+          <div class="project-tags"><span class="tag">z/TPF</span><span class="tag">Sabretalk</span><span class="tag">Assembler</span></div>
+        </div>
+
+        <div class="project-card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <span class="project-name">05 &bull; 737 MAX MCAS Special Training</span>
+            <span class="timeline-date">Mar 2019 &ndash; Aug 2019</span>
+          </div>
+          <div style="font-size:0.85rem;color:var(--accent);margin-bottom:8px"><strong>Client:</strong> DXC Technology (American Airlines)</div>
+          <p class="project-desc">Enhancements to add 737 MAX MCAS CB TRAINING to all Pilots and alert Crew Scheduling applications if training is incomplete.</p>
+          <div class="project-tags"><span class="tag">z/TPF</span><span class="tag">Sabretalk</span><span class="tag">Assembler</span></div>
+        </div>
+
+        <div class="project-card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <span class="project-name">06 &bull; Single FOS Partition Merger</span>
+            <span class="timeline-date">Jan 2016 &ndash; Feb 2017</span>
+          </div>
+          <div style="font-size:0.85rem;color:var(--accent);margin-bottom:8px"><strong>Client:</strong> HPE (American Airlines)</div>
+          <p class="project-desc">Migration of two Major American Airlines into a Single Partition &ndash; the FOS partition for Pilots and Flight Attendants.</p>
+          <div class="project-tags"><span class="tag">z/TPF</span><span class="tag">TPFDF</span><span class="tag">Assembler</span><span class="tag">Sabretalk</span></div>
+        </div>
+
+        <div class="project-card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <span class="project-name">07 &bull; Airline Data Platform (AWS)</span>
+            <span class="timeline-date">2021 &ndash; 2022</span>
+          </div>
+          <div style="font-size:0.85rem;color:var(--accent);margin-bottom:8px"><strong>Client:</strong> Mphasis (Multiple Airlines)</div>
+          <p class="project-desc">Creation of Data Lake &amp; Data Warehouse platform using Airline/Airport data for Analytics and Reporting.</p>
+          <div class="project-tags">
+            <span class="tag">PySpark</span><span class="tag">AWS Glue</span><span class="tag">EMR</span>
+            <span class="tag">S3</span><span class="tag">Kinesis</span><span class="tag">Athena</span>
+            <span class="tag">Quicksight</span><span class="tag">Snowflake</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Ingestion of PNR, Ticketing, Passenger, Check-in, Feedback, Weather, and Car Parking data.</li>
+            <li>Write PySpark programs for data transformation in AWS Glue and EMR.</li>
+            <li>Implement Business Use Cases in AWS Quicksight for client demos.</li>
+          </ul>
+        </div>
+
+        <p style="color:var(--text-secondary);font-size:0.9rem;font-style:italic;margin-top:8px">
+          Additional projects: Break in Rest Activity, Pilot Division Qualifications Redesign, Fleet B767/B757,
+          Pilot Lock Entry, AXS Control TPFC, Seat Platform Re-accommodation, TPF SHARES DCS &amp; Reservation Maintenance
+          &ndash; see full Visa resume for complete details.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Hexaware Technologies (Sep 2009 &ndash; Apr 2013)</h2>
+
+        <div class="project-card" style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <span class="project-name">IBM TPF DCS &amp; Reservation Maintenance</span>
+            <span class="timeline-date">Sep 2009 &ndash; Apr 2013</span>
+          </div>
+          <div style="font-size:0.85rem;color:var(--accent);margin-bottom:8px"><strong>Client:</strong> IBM Canada (Air Canada)</div>
+          <p class="project-desc">Maintenance and development of DCS and Reservation systems including Secure Flights (TSA), STAR Alliance Auto Doc Check, and ASP TPF for All Nippon Airways.</p>
+          <div class="project-tags">
+            <span class="tag">TPF 4.1</span><span class="tag">Assembler</span><span class="tag">SPM</span>
+            <span class="tag">TPFDF</span><span class="tag">JCL</span><span class="tag">REXX</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Customer Recognition</h2>
+        <div class="project-card" style="margin-bottom:12px">
+          <p style="font-style:italic;font-size:0.9rem;color:var(--text-secondary);line-height:1.6">
+            &ldquo;I would like to recognize Pavan Prabhu for his contributions to the Pilot Readiness Product.
+            Pavan&rsquo;s strong knowledge and diligence continues to be a great asset to the team.
+            He communicates well, is attentive, addresses concerns as they arise, and drives to produce a quality product.
+            We are fortunate to have Pavan as part of the team.&rdquo;
+          </p>
+          <p style="font-size:0.85rem;font-weight:600;margin-top:8px">&mdash; Barbara C Patterson PMP CSM, Sr. Manager, Pilot Technology</p>
+        </div>
+        <div class="project-card" style="margin-bottom:12px">
+          <p style="font-style:italic;font-size:0.9rem;color:var(--text-secondary);line-height:1.6">
+            &ldquo;You are trying your best to accomplish this, for that you go above and beyond with Delta and IBM team members
+            to troubleshoot the issues happening. You don&rsquo;t sit quiet until it is resolved and understand the root cause.
+            What is most important is your patience level, you keep yourself to the calmest level.&rdquo;
+          </p>
+          <p style="font-size:0.85rem;font-weight:600;margin-top:8px">&mdash; Manju Yadav, IT Sr. Tech Product Engg., FDM Core Ticketing</p>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2025 Pavankumar Prabhu. Built with care.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
