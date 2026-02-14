@@ -174,7 +174,7 @@ function handleContactForm(e) {
 
   // Using Formspree - replace YOUR_FORM_ID with actual Formspree form ID
   // Sign up free at https://formspree.io and create a form to get the ID
-  var FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID';
+  var FORMSPREE_URL = 'https://formspree.io/f/xzdargzv';
 
   // For now, show a success message (will work once Formspree is configured)
   var submitBtn = form.querySelector('button[type="submit"]');
